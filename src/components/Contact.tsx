@@ -10,17 +10,17 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Address",
-    details: ["New Delhi, India"],
+    details: ["Sardar Vallabhai Patel Sports Academy", "No 29, Canal Street, Triplicane, Chennai - 600005"],
   },
   {
     icon: Phone,
     title: "Phone",
-    details: ["+91 XXX XXX XXXX"],
+    details: ["+91 95439 99042"],
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["info@svpacademy.org"],
+    details: ["svpsportsacademy@gmail.com"],
   },
   {
     icon: Clock,
@@ -55,11 +55,12 @@ const Contact = () => {
             Get In <span className="text-primary">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Join India's premier martial arts academy or support our mission
+            Join the academy or contact us for training & development programs.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
+          
           {/* Contact Form */}
           <Card className="p-8 animate-fade-in">
             <h3 className="text-2xl font-bold mb-6">Send Us a Message</h3>
@@ -114,7 +115,7 @@ const Contact = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Tell us about your interest in our programs..."
+                  placeholder="Tell us about your interest…"
                   rows={5}
                   required
                 />
@@ -125,7 +126,7 @@ const Contact = () => {
             </form>
           </Card>
 
-          {/* Contact Information */}
+          {/* Right Section */}
           <div className="space-y-8">
             {contactInfo.map((info, index) => (
               <Card
@@ -149,29 +150,15 @@ const Contact = () => {
               </Card>
             ))}
 
-            {/* Quick Links */}
-            <Card className="p-8 bg-muted">
-              <h3 className="text-2xl font-bold mb-4">Quick Links</h3>
-              <div className="space-y-3">
-                <button 
-                  onClick={() => document.getElementById("donate")?.scrollIntoView({ behavior: "smooth" })}
-                  className="block w-full text-left text-primary hover:underline font-semibold"
-                >
-                  → Support Our Athletes
-                </button>
-                <button 
-                  onClick={() => document.getElementById("programs")?.scrollIntoView({ behavior: "smooth" })}
-                  className="block w-full text-left text-muted-foreground hover:text-foreground"
-                >
-                  → Join Our Programs
-                </button>
-                <button 
-                  onClick={() => document.getElementById("achievements")?.scrollIntoView({ behavior: "smooth" })}
-                  className="block w-full text-left text-muted-foreground hover:text-foreground"
-                >
-                  → Our Achievements
-                </button>
-              </div>
+            {/* GOOGLE MAP */}
+            <Card className="p-4">
+              <iframe
+                title="Google Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.614181067454!2d80.2801!3d13.0607..."
+                className="w-full h-72 rounded"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
             </Card>
           </div>
         </div>
