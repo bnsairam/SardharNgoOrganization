@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Programs from "@/components/Programs";
 import Achievements from "@/components/Achievements";
 import Gallery from "@/components/Gallery";
+import Donation from "@/components/Donation";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ const Index = () => {
         <Programs />
         <Achievements />
         <Gallery />
+        <Donation />
         <Contact />
       </main>
       <Footer />

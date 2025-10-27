@@ -149,16 +149,29 @@ const Contact = () => {
               </Card>
             ))}
 
-            {/* Donation CTA */}
-            <Card className="p-8 bg-gradient-to-br from-primary to-secondary text-white">
-              <h3 className="text-2xl font-bold mb-4">Support Our Mission</h3>
-              <p className="mb-6 opacity-90">
-                Your donation helps us train the next generation of Olympic champions and provide 
-                opportunities to specially-abled athletes.
-              </p>
-              <Button size="lg" variant="outline" className="w-full border-white text-white hover:bg-white hover:text-primary">
-                Donate Now
-              </Button>
+            {/* Quick Links */}
+            <Card className="p-8 bg-muted">
+              <h3 className="text-2xl font-bold mb-4">Quick Links</h3>
+              <div className="space-y-3">
+                <button 
+                  onClick={() => document.getElementById("donate")?.scrollIntoView({ behavior: "smooth" })}
+                  className="block w-full text-left text-primary hover:underline font-semibold"
+                >
+                  → Support Our Athletes
+                </button>
+                <button 
+                  onClick={() => document.getElementById("programs")?.scrollIntoView({ behavior: "smooth" })}
+                  className="block w-full text-left text-muted-foreground hover:text-foreground"
+                >
+                  → Join Our Programs
+                </button>
+                <button 
+                  onClick={() => document.getElementById("achievements")?.scrollIntoView({ behavior: "smooth" })}
+                  className="block w-full text-left text-muted-foreground hover:text-foreground"
+                >
+                  → Our Achievements
+                </button>
+              </div>
             </Card>
           </div>
         </div>
